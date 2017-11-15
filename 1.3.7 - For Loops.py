@@ -24,9 +24,11 @@ def dice(n):
 def matches(ticket, winners):
     
     total = 0
+    n = -1
     
-    for ticket in winners:
-        total += 1
-        
+    for item in range(5):
+        n += 1
+        if ticket[n] in winners:
+            total += 1
+            
     return total
-    
